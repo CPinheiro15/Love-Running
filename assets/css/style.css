@@ -18,6 +18,13 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+h1, h2, h3 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #252525;
+}
+
 /* Header */
 header {
   background-color: #ffffff;
@@ -34,13 +41,6 @@ header {
 header a {
   text-decoration: none;
   color: inherit;
-}
-
-h1 {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #252525;
 }
 
 #menu {
@@ -63,7 +63,7 @@ nav {
   background-color: #ffffff;
   width: 100%;
   left: 0;
-  padding: 0 1 rem;
+  padding: 0 1rem;
   box-shadow: 0 2px 2px #3a3a3a;
   display: none;
   top: 100%;
@@ -91,15 +91,32 @@ main {
 
 /* Hero Section */
 #hero {
-  height: 600px;
+  height: 100vh; /* This makes it take the full viewport height */
   width: 100%;
   background: url("../images/hero-image.webp") no-repeat center center/cover;
+  position: relative;
+}
+
+/* Ensure #cover-text is properly positioned */
+#cover-text {
+  background-color: rgba(241, 109, 107, 0.7);
+  font-size: 130%;
+  position: absolute;
+  bottom: 30px;
+  width: 80%;
+  min-height: 200px;
+  padding-top: 40px;
+  padding-left: 10px;
+}
+
+#cover-text > h2, #cover-text > h3 {
+  color: #ffffff;
 }
 
 /* Footer */
 #social-networks {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
@@ -142,8 +159,14 @@ main {
 
   /* Main content */
   main {
-    /* Push main content down to accomodate larger header */
+    /* Push main content down to accommodate larger header */
     margin-top: 79px;
+  }
+
+  /* Hero image */
+  #cover-text {
+    width: 300px;
+    right: 50px;
   }
 }
 
