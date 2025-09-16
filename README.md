@@ -1,6 +1,6 @@
 # Love Running
 
-🔗 **Live Site**: [Love Running](https://cpinheiro15.github.io/Love-Running/)
+🔗 **Live Site**: [Love Running](https://d2ty24l1gpxkta.cloudfront.net/)
 
 A responsive website for a Dublin-based running community that organizes regular group runs at various urban and trail locations. The site showcases the physical, mental, and social benefits of running, features a gallery of diverse running events, and includes a sign-up form for new members.
 
@@ -15,6 +15,8 @@ A responsive website for a Dublin-based running community that organizes regular
 
 - HTML5
 - CSS3
+- AWS S3 (static website hosting)
+- AWS CloudFront (CDN with Origin Access Control for secure access)
 
 ## User Experience
 
@@ -26,12 +28,12 @@ The website targets running enthusiasts of all levels looking to join a supporti
 
 ## Deployment
 
-The site is deployed using GitHub Pages. The deployment process involves:
+The site is deployed on AWS S3 with CloudFront:
 
-1. Creating a GitHub repository
-2. Adding and committing all files to Git
-3. Pushing the code to the GitHub repository
-4. Enabling GitHub Pages in the repository settings
+1. Uploaded static files (HTML, CSS, images) to a private S3 bucket
+2. Configured CloudFront distribution with Origin Access Control to securely serve the content
+3. Enabled HTTPS and caching via CloudFront for global accessibility and improved performance
+4. Site is accessible via the CloudFront URL: https://d2ty24l1gpxkta.cloudfront.net
 
 ## Testing
 
